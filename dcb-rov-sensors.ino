@@ -115,19 +115,19 @@ void loop() {
   sensor.read();
 
   Serial.print("Pressure: "); 
-  Serial.print(sensor.pressure()); 
+  Serial.print(sensor.pressure(A0)); 
   Serial.println(" mbar");
   
   Serial.print("Temperature: "); 
-  Serial.print(sensor.temperature()); 
+  Serial.print(sensor.temperature(A4)); 
   Serial.println(" deg C");
   
   Serial.print("Depth: "); 
-  Serial.print(sensor.depth()); 
+  Serial.print(sensor.depth(A5)); 
   Serial.println(" m");
   
   Serial.print("Altitude: "); 
-  Serial.print(sensor.altitude()); 
+  Serial.print(sensor.altitude(A6)); 
   Serial.println(" m above mean sea level");
 
   delay(1000);
