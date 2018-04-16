@@ -10,7 +10,7 @@ void loop()
 light = analogRead(A0);
 Serial.println(light);
 
-}}
+}
 int redlight; // RPR
 void setup()
 {
@@ -23,7 +23,7 @@ void loop()
 redlight = analogRead(A1);
 Serial.println(redlight);
 
-}}
+}
 int greenlight; // GPR
 void setup()
 {
@@ -36,7 +36,7 @@ void loop()
 greenlight = analogRead(A2);
 Serial.println(greenlight);
 
-}}
+}
 int bluelight; //BPR
 void setup()
 {
@@ -49,7 +49,7 @@ void loop()
 bluelight = analogRead(A3);
 Serial.println(bluelight);
 
-}}
+}
 int PTDA
 
 MS5837 sensor; // pressure sensors 
