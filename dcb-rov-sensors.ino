@@ -14,7 +14,7 @@ void loop()
 
 #include "MS5837.h"
 
-MS5837 sensor; // presure sensors
+MS5837 sensor; // pressure sensors
 
 void setup() {
   
