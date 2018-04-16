@@ -1,96 +1,40 @@
-int light; // photoresistor
+// INCLUDES
+
+// CONSTANTS
+int redPin = A0; // photoresistor
+int greenPin = A1; // RPR
+int bluePin = A2;
+int rgbPin = A3; 
+
+// VARIABLES
+int redVal;
+int greenVal;
+int blueVal;
+int rgbVal;
+
+
 void setup()
 {
-pinMode(A0,INPUT);
-Serial.begin(9600);
+ pinMode(redPin,INPUT);
+ pinMode(bluePin,INPUT);
+ pinMode(greenPin,INPUT);
+ pinMode(redPin,INPUT);
+ Serial.begin(9600);
 }
 
 void loop()
 {
-light = analogRead(A0);
-Serial.println(light);
-
-}}
-int redlight; // RPR
-void setup()
-{
-pinMode(A1,INPUT);
-Serial.begin(9600);
-}
-
-void loop()
-{
-redlight = analogRead(A1);
-Serial.println(redlight);
-
-}}
-int greenlight; // GPR
-void setup()
-{
-pinMode(A2,INPUT);
-Serial.begin(9600);
-}
-
-void loop()
-{
-greenlight = analogRead(A2);
-Serial.println(greenlight);
-
-}}
-int bluelight; //BPR
-void setup()
-{
-pinMode(A3,INPUT);
-Serial.begin(9600);
-}
-
-void loop()
-{
-bluelight = analogRead(A3);
-Serial.println(bluelight);
-
-}}
-int pressure
-
-MS5837 sensor; // pressure sensors 
-
- #include <Wire.h>
-#include "MS5837.h"
-
-MS5837 sensor;
-
-void setup() {
-  
-  Serial.begin(9600);
-  
-  Serial.println("Starting");
-  
-  Wire.begin();
-
-  sensor.init();
-  
-  sensor.setFluidDensity(997); // kg/m^3 (997 freshwater, 1029 for seawater)
-}
-
-void loop() {
-
-  sensor.read();
-
-  Serial.print("Pressure: "); 
-  Serial.print(sensor.pressure()); 
-  Serial.println(" mbar");
-  
-  Serial.print("Temperature: "); 
-  Serial.print(sensor.temperature()); 
-  Serial.println(" deg C");
-  
-  Serial.print("Depth: "); 
-  Serial.print(sensor.depth()); 
-  Serial.println(" m");
-  
-  Serial.print("Altitude: "); 
-  Serial.print(sensor.altitude()); 
-  Serial.println(" m above mean sea level");
-
-  delay(1000);
+ redVal = analogRead(redPin);
+ Serial.print(redVal);
+ Serial.print(",");
+ greenVal = analogRead(greenPin);
+ Serial.print(greenVal);
+ Serial.print(",");
+ blueVal = analogRead(bluePin);
+ Serial.print(blueVal);
+ Serial.print(",");
+ rgbVal = analogRead(rgbPin);
+ Serial.print(rgbVal);
+ Serial.print(",");
+ \"r"
 }
