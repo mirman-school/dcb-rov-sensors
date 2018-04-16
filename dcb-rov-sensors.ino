@@ -1,9 +1,13 @@
-int light; // photoresistor
+#include "MS5837.h"
 #include <SoftwareSerial.h>                          
 #define rx 2(A2)                                     
 #define tx 3(A3)    
+int light; // photoresistor
+int redlight; // RPR
+int greenlight; // GPR
+int bluelight; //BPR
 int PTDA
-#include "MS5837.h"
+
 MS5837 sensor; // pressure sensors
 
 void setup()
@@ -31,6 +35,15 @@ void setup()
 void loop() {                                        
 {
   light = analogRead(A1);
+  Serial.println(light);
+  
+   light = analogRead(A7);
+  Serial.println(light);
+  
+   light = analogRead(A);
+  Serial.println(light);
+  
+   light = analogRead(A1);
   Serial.println(light);
 }
               
