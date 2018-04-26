@@ -2,15 +2,16 @@
 #include <Wire.h>
 #include "MS5837.h"
 #include <SoftwareSerial.h>                          
-#define rx 2(A2)                                     
-#define tx 3(A3)    
+#define rx 2                                    
+#define tx 3   
 int light; // photoresistor
 int redlight; // RPR
 int greenlight; // GPR
 int bluelight; //BPR
+MS5837 sensor;
+SoftwareSerial myserial;
 
 // CONSTANTS
-MS5837 sensor;
 int redPin = A0; // photoresistor
 int greenPin = A1; // RPR
 int bluePin = A2;
