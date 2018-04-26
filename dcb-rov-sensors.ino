@@ -1,6 +1,13 @@
 // INCLUDES
 #include <Wire.h>
 #include "MS5837.h"
+#include <SoftwareSerial.h>                          
+#define rx 2(A2)                                     
+#define tx 3(A3)    
+int light; // photoresistor
+int redlight; // RPR
+int greenlight; // GPR
+int bluelight; //BPR
 
 // CONSTANTS
 MS5837 sensor;
