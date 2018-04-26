@@ -6,7 +6,6 @@ int light; // photoresistor
 int redlight; // RPR
 int greenlight; // GPR
 int bluelight; //BPR
-int PTDA
 
 MS5837 sensor; // pressure sensors
 
