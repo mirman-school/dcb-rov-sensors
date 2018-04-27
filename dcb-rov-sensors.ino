@@ -1,3 +1,13 @@
+// WIRE MAPPINGS
+// O: P/T Green
+// Os: 
+// G: DO
+// Gs: P/T White
+// Bl: Ground
+// Bls: +5v
+// Br: PR
+// Brs: DO
+
 // INCLUDES
 #include <Wire.h>
 #include "MS5837.h"
@@ -5,24 +15,16 @@
 #define rx 2                                    
 #define tx 3   
 int light; // photoresistor
-int redlight; // RPR
-int greenlight; // GPR
-int bluelight; //BPR
+
 MS5837 sensor;
-SoftwareSerial myserial;
+SoftwareSerial myserial(rx, tx); 
 
 // CONSTANTS
-int redPin = A0; // photoresistor
-int greenPin = A1; // RPR
-int bluePin = A2;
-int rgbPin = A3; 
+int lightPin = A3; 
 
 // VARIABLES
-int redVal;
-int greenVal;
-int blueVal;
-int rgbVal;
-int pressure
+int lightVal;
+int pressure;
 
 
 void setup()
@@ -41,19 +43,13 @@ void setup()
 
 void loop()
 {
- redVal = analogRead(redPin);
- greenVal = analogRead(greenPin);
- blueVal = analogRead(bluePin);
- rgbVal = analogRead(rgbPin);
+ lightVal = analogRead(lightPin);
  sensor.read();
  
- Serial.print(rgbVal);
+ Serial.print(lightVal);
  Serial.print(",");
- Serial.print(redVal);
  Serial.print(",");
- Serial.print(greenVal);
  Serial.print(",");
- Serial.print(blueVal);
  Serial.print(",");
  Serial.print(sensor.pressure()); 
  Serial.print(",");
